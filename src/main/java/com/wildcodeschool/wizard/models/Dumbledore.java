@@ -2,6 +2,11 @@ package com.wildcodeschool.wizard.models;
 
 public class Dumbledore implements  WizardInterface {
 
+    private Outfit outfit;
+
+    public Dumbledore(Outfit myOutfit) {
+        outfit = myOutfit;
+    }
 
     @Override
     public String giveAdvice() {
@@ -10,6 +15,6 @@ public class Dumbledore implements  WizardInterface {
 
     @Override
     public String changeDress() {
-        return null;
+        return outfit.dress();
     }
 }

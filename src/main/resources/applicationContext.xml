@@ -6,7 +6,15 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.wildcodeschool.wizard.models">
-    </context:component-scan>
+ <bean id="myOutfit" class="com.wildcodeschool.wizard.models.Outfit"></bean>
+
+
+     <bean id="dumbledore" class="com.wildcodeschool.wizard.models.Dumbledore">
+        <constructor-arg ref="myOutfit"/>
+    </bean>
+    <bean id="gandalf" class="com.wildcodeschool.wizard.models.Gandalf">
+        <constructor-arg ref="myOutfit"/>
+    </bean>
+
 
 </beans>

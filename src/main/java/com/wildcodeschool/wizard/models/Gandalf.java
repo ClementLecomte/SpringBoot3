@@ -3,12 +3,12 @@ package com.wildcodeschool.wizard.models;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("gandalf")
+
 public class Gandalf implements WizardInterface {
 
     private Outfit outfit;
 
-    @Autowired
+
     public Gandalf (Outfit myOutfit) {
         outfit = myOutfit;
     }
